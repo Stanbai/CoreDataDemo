@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AttendanceTime" representedClassName=".AttendanceTime" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="workers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Worker" inverseName="attendances" inverseEntity="Worker" syncable="YES"/>
+    </entity>
+    <entity name="Worker" representedClassName="Worker" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AttendanceTime" inverseName="workers" inverseEntity="AttendanceTime" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AttendanceTime" positionX="-108" positionY="53" width="128" height="73"/>
+        <element name="Worker" positionX="-434" positionY="48" width="155" height="73"/>
+    </elements>
+</model>
