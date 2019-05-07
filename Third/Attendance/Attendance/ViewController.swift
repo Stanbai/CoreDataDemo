@@ -97,7 +97,7 @@ extension ViewController: UITableViewDataSource {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let attendanceRemove = currentWorker?.attendances?[indexPath.row] as? AttendanceTime,
         editingStyle == .delete
         else { return }

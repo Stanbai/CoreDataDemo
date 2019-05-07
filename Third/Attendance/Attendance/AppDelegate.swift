@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var coreDataStack = CoreDataStack(modelName: "check")
     
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         guard let navController = window?.rootViewController as? UINavigationController,
             let vc = navController.topViewController as? ViewController
