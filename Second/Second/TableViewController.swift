@@ -107,11 +107,11 @@ extension TableViewController {
     }
     
     fileprivate func initData() {
-        let data1 = UIImagePNGRepresentation(#imageLiteral(resourceName: "avatar1"))
+        let data1 = #imageLiteral(resourceName: "avatar1").pngData()
         let time = Date()
         let user1 = User(avatarImg: data1!, isRelative: true, name: "Jesse Sapir", updateTime: time, viewTimes: 32, mobile: "26098642878")
         
-        let data2 = UIImagePNGRepresentation(#imageLiteral(resourceName: "avatar2"))
+        let data2 = #imageLiteral(resourceName: "avatar2").pngData()
         let user2 = User(avatarImg: data2!, isRelative: false, name: "Virginia Woolf", updateTime: time, viewTimes: 1, mobile: "25660228794")
         
         TableViewController.insertData(contactInfo: user1)

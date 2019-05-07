@@ -66,7 +66,7 @@ class EditTVC: UITableViewController {
     
     @IBAction func saveBtnClick(_ sender: Any) {
         
-        let user = User(avatarImg: UIImagePNGRepresentation(UIImage(named: "avatar\(arc4random_uniform(5) + 1)")!)!, isRelative: relativeSwitch.isOn ? true : false, name: nameTF.text ?? "", updateTime: Date(), viewTimes: 1, mobile: mobileTF.text ?? "")
+        let user = User(avatarImg: UIImage(named: "avatar\(arc4random_uniform(5) + 1)")!.pngData()!, isRelative: relativeSwitch.isOn ? true : false, name: nameTF.text ?? "", updateTime: Date(), viewTimes: 1, mobile: mobileTF.text ?? "")
 
         TableViewController.insertData(contactInfo: user)
         
